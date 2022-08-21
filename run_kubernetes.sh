@@ -10,8 +10,7 @@ dockerpath=neyobrainy/myfirstimage
 # Run the Docker Hub container with kubernetes
 kubectl run myminikube \
     --image=$dockerpath \
-    --port=80 \
-    -- labels app=myminikube
+    --port=80 
 
 
 # Step 3:

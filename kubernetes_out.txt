@@ -1,0 +1,22 @@
+(.devops) voclabs:~/environment/DevOps_Microservices (main) $ kubectl get pod
+NAME         READY   STATUS    RESTARTS   AGE
+myminikube   1/1     Running   0          25s
+(.devops) voclabs:~/environment/DevOps_Microservices (main) $ kubectl port-forward myminikube 8000:80 &
+[1] 25503
+(.devops) voclabs:~/environment/DevOps_Microservices (main) $ Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
+
+
+
+
+
+
+(.devops) voclabs:~/environment/DevOps_Microservices (main) $ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
